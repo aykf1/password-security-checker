@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <meta name="description" content="Şifrenin gücünü cihazında, güvenli ve özel biçimde kontrol et.">
+  <title>Şifre Güvenliği Kontrolü</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="GüvenliŞifre ana sayfa">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span>Güvenli<span class="brand-accent">Şifre</span></span>
+      </a>
+      <span class="privacy-pill"><span class="privacy-dot"></span> Gizliliğin korunur</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">ŞİFRE SAĞLIĞI KONTROLÜ</p>
+      <h1 id="page-title">Daha güçlü bir şifre,<br><span>daha güvende</span> hissettirir.</h1>
+      <p class="hero-copy">Şifreni aşağıya yaz, gücünü anında gör ve nasıl geliştirebileceğini öğren.</p>
+    </section>
+
+    <section class="checker-card" aria-label="Şifre kontrol aracı">
+      <label class="field-label" for="password">Şifren</label>
+      <div class="input-wrap">
+        <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Kontrol etmek için yazmaya başla" spellcheck="false" aria-describedby="privacy-note">
+        <button class="visibility-button" id="toggle-visibility" type="button" aria-label="Şifreyi göster" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+      <p class="privacy-note" id="privacy-note"><span aria-hidden="true">🔒</span> Şifren cihazından ayrılmaz; hiçbir yere gönderilmez veya kaydedilmez.</p>
+
+      <div class="strength-heading">
+        <span>Şifre gücü</span>
+        <strong id="strength-label" class="strength-label" aria-live="polite">Henüz değerlendirilmedi</strong>
+      </div>
+      <div class="strength-track" role="progressbar" aria-label="Şifre gücü" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="strength-progress">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <h2 class="checks-title">Güvenlik ölçütleri</h2>
+      <ul class="checks-list" id="checks-list">
+        <li data-check="length"><span class="check-icon">○</span><span>En az 12 karakter</span></li>
+        <li data-check="lower"><span class="check-icon">○</span><span>Küçük harf içeriyor</span></li>
+        <li data-check="upper"><span class="check-icon">○</span><span>Büyük harf içeriyor</span></li>
+        <li data-check="number"><span class="check-icon">○</span><span>En az bir rakam içeriyor</span></li>
+        <li data-check="symbol"><span class="check-icon">○</span><span>Bir sembol içeriyor</span></li>
+      </ul>
+      <p class="feedback" id="feedback" aria-live="polite">Şifreni yazdığında sana özel öneriler burada görünecek.</p>
+    </section>
+
+    <footer class="page-footer">Bu araç temel kontroller yapar; hiçbir şifreyi tek başına tamamen güvenli hâle getiremez.</footer>
+  </main>
+</body>
+</html>
